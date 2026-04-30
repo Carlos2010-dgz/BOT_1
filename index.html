@@ -33,7 +33,7 @@
   </div>
 
   <script>
-    const personalidad = "Eres un asistente de transporte de mercancías internacional. Respondes en español, de forma breve.";
+    const personalidad = "Eres un experto en todos los ambitos estudiantiles.";
 
     async function enviar() {
       const texto = document.getElementById('entrada').value.trim();
@@ -65,7 +65,7 @@
               { role: "system", content: personalidad },
               { role: "user", content: mensaje }
             ],
-            max_tokens: 200
+            max_tokens: 1000000
           })
         });
         const datos = await respuesta.json();
